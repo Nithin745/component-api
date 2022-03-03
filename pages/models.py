@@ -17,3 +17,6 @@ class Content(models.Model):
     type = models.ForeignKey(
         Type, on_delete=models.CASCADE, related_name='content_type')
 
+    def __str__(self):
+        return self.main_content
+
