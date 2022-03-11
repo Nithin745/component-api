@@ -16,6 +16,7 @@ class Content(models.Model):
     image = models.ImageField(upload_to='images/', null=True)
     type = models.ForeignKey(
         Type, on_delete=models.CASCADE, related_name='content_type')
+    file = models.FileField('video files', upload_to='video/', null=True, blank=True)
 
     def __str__(self):
         return self.main_content

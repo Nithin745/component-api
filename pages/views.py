@@ -16,7 +16,8 @@ class ContentViewset(viewsets.ModelViewSet):
                 content = content.filter(type__name=params)
             if params == "card":
                 content = content.filter(type__name=params)
-            print(content.values())
+        else:
+            content = Content.objects.all().order_by('id')
         return content
 
 

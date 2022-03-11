@@ -14,4 +14,4 @@ class ContentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Content
-        fields = ('main_content', 'sub_content', 'image', 'type')
+        fields = ('main_content', 'sub_content', 'image', 'type', 'file', 'url')
